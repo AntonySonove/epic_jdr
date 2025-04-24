@@ -1,0 +1,54 @@
+.mainCharacterSheet{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    color: white;
+}
+.characterSheet{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: solid 1px #8000ff;
+}
+.characterSheet h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.stat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.statName{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    gap: 15px;
+    justify-content: space-between;
+}
+.currentStat, .newStat{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-between;
+}
+.newStat input{
+    width: 40px;
+    border: solid 1px #8000ff;
+}
+.modify{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.modify input{
+    /* background-color: #EBCBAD; */
+    background-color: rgb(55, 55, 55);
+    border: solid 1px #8000ff;
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}

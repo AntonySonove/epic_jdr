@@ -1,0 +1,47 @@
+.mainCreateCharacter{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    color: white;
+}
+.formCreateCharacter{
+    display: flex;
+    justify-content: space-between;
+}
+.formCreateCharacter div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.statInput{
+    align-items: end;
+}
+.formCreateCharacter input{
+    width: 40px;
+    border: #8000ff solid 1px;
+}
+#inputName{
+    min-width: 150px;
+}
+.submitCreateCharacter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.submitCreateCharacter input{
+    /* background-color: #EBCBAD; */
+    /* border: solid 1px #8000ff; */
+    background-color: rgb(55, 55, 55);
+    color: white;
+    border: solid 1px #8000ff;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.return{
+    display: flex;
+    justify-content: end;
+    /* color: white; */
+}

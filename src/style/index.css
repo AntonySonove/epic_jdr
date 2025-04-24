@@ -1,0 +1,40 @@
+.mainIndex{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    color: white;
+}
+.welcome{
+    /* background-color: #F7EADE; */
+    background-color: rgb(25, 25, 25);
+    border: solid 1px #8000ff;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    padding: 25px;
+    
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.welcome h2, .welcome h1{
+    text-align: center;
+}
+.submitIndex{
+    /* background-color: #EBCBAD; */
+    /* border: solid 1px #8000ff; */
+    background-color: rgb(55, 55, 55);
+    color: white;
+    border: solid 1px #8000ff;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    max-width: 200px;
+}
+.connexion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

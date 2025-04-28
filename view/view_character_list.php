@@ -12,7 +12,7 @@ class ViewCharacterList{
     public function displayView(): array | string{
 
         return '
-<main class="mainIndex">
+<main class="mainCharacterList">
     <h2>Mes personnages</h2>
     <div class= gridCharacterList>
         '.$this->getCharacterList().'

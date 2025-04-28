@@ -110,6 +110,7 @@ class ModelCreateCharacter{
             $req->bindParam(9,$id,PDO::PARAM_INT);
             $req->execute();
             
+            header("location:../controller/controller_character_list.php");
             
             return "<span style= 'color: green'>*Nouveau personnage enregistré</span>";
 
@@ -133,6 +134,4 @@ class ModelCreateCharacter{
             return $error->getMessage();
         }
     }
-
-
 }

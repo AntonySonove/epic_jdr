@@ -20,11 +20,12 @@ class ViewHeader{
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../src/style/header.css">
     <link rel="stylesheet" href="../src/style/footer.css">
-    <link rel="stylesheet" href="../src/style/account.css">
     <link rel="stylesheet" href="../src/style/index.css">
+    <link rel="stylesheet" href="../src/style/account.css">
     <link rel="stylesheet" href="../src/style/create_character.css">
     <link rel="stylesheet" href="../src/style/character_list.css">
     <link rel="stylesheet" href="../src/style/character_sheet.css"> 
+    <link rel="stylesheet" href="../src/style/play.css"> 
 </head>
 <body>
 

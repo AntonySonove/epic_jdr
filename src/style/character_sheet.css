@@ -35,7 +35,7 @@
 }
 .newStat input{
     width: 40px;
-    border: solid 1px #8000ff;
+    border: solid 1px rgba(0, 0, 255, 0);
 }
 .modify{
     margin-top: 10px;
@@ -43,7 +43,6 @@
     justify-content: flex-end;
 }
 .modify input{
-    /* background-color: #EBCBAD; */
     background-color: rgb(55, 55, 55);
     border: solid 1px #8000ff;
     color: white;
@@ -51,4 +50,34 @@
     padding: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+.modify input:hover{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+}
+.modify input:focus{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+    outline: none;
+}
+
+@media(min-width: 576px){
+    .mainCharacterSheet{
+        padding: 25px 100px
+    }
+}
+@media(min-width: 768px){
+    .mainCharacterSheet{
+        padding: 25px 200px
+    }
+}
+@media(min-width: 1200px){
+    .mainCharacterSheet{
+        padding: 25px 300px
+    }
+}
+@media(min-width: 1400px){
+    .mainCharacterSheet{
+        padding: 25px 400px
+    }
 }

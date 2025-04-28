@@ -30,11 +30,19 @@ class ControllerCharacterList{
 
         $characterList="";
         
-        foreach($this->modelCharacterList->getAll() as $row){
+        $data=$this->modelCharacterList->getAll();
+
+        foreach($data as $row){
 
             $characterList=$characterList.'
             <article>
-                <a href="../controller/controller_character_sheet.php?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">'.$row["name_character"].'</a>
+                <p>'.$row["name_character"].'</p>
+
+                <div>
+                    <a href="../controller/controller_character_sheet.php?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Fiche</a>
+
+                    <a href="../controller/controller_play.php?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Jouer</a>
+                </div>
             </article>
             ';
         }

@@ -38,20 +38,20 @@ class ControllerIndex{
         //* vérifier que les champs ne sont pas vides
         if(empty($_POST["nickname"]) || empty($_POST["email"]) || empty($_POST["password"]) || empty($_POST["password2"])){
 
-            return "<span style='color: red'>*Un ou plusieurs champs sont vides</span>";
+            return "<p><span style='color: red'>*Un ou plusieurs champs sont vides</span></p>";
         }
 
         //* vérifier le format de l'email
         if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
 
-            return "<span style='color: red'>*Mauvais format d'email</span>";
+            return "<p><span style='color: red'>*Mauvais format d'email</span></p>";
         }
 
 
         //* vérifier que les mots de passe correspondent
         if($_POST["password"]!=$_POST["password2"]){
 
-            return "<span style='color: red'>*Les mots de passe ne correspondent pas</span>";
+            return "<p><span style='color: red'>*Les mots de passe ne correspondent pas</span></p>";
         }
 
         //* nettoyage des données
@@ -68,17 +68,17 @@ class ControllerIndex{
         $this->getModelIndex()->setNickname($nickname);
         $this->getModelIndex()->setPassword($password);
         
-        //* vérifier si l'email et la pseudo sont disponible
+        //* vérifier si l'email et le pseudo sont disponible
         $dataEmail=$this->getModelIndex()->getByEmail();
         if(!empty($dataEmail)){
 
-            return "<span style='color: red'>*Email déjà utilisé</span>";
+            return "<p><span style='color: red'>*Email déjà utilisé</span></p>";
         }
 
         $dataNickname=$this->getModelIndex()->getByNickname();
         if(!empty($dataNickname)){
 
-        return "<span style='color: red'>*Pseudo déjà utilisé</span>";
+        return "<p><span style='color: red'>*Pseudo déjà utilisé</span></p>";
         }
         
 
@@ -93,14 +93,14 @@ class ControllerIndex{
             //* verifier ques champs ne sont pas vides
             if(empty($_POST["emailConnexion"]) || empty($_POST["passwordConnexion"])){
                 
-                return "<span style='color: red'>*Un ou plusieurs champs sont vides</span>";
+                return "<p><span style='color: red'>*Un ou plusieurs champs sont vides</span></p>";
                 
             }
             
             //* vérifier le format de l'email 
-            if(!filter_var(($_POST["emailConnexion"]), FILTER_VALIDATE_EMAIL)){
+            if(!filter_var($_POST["emailConnexion"], FILTER_VALIDATE_EMAIL)){
                 
-                return "<span style='color: red'>*Mauvais format d'email</span>";
+                return "<p><span style='color: red'>*Mauvais format d'email</span></p>";
             }
             
             //* nettoyage des données
@@ -113,14 +113,14 @@ class ControllerIndex{
             
             $data=$this->getModelIndex()->getByEmail();
             if(empty($data)){
-
-                return "<span style='color: red'>*L'e-mail et/ou le mot de passe ne correspondent pas</span>";
+                
+                return "<p><span style='color: red'>*L'e-mail et/ou le mot de passe ne correspondent pas</span></p>";
             }
             
             //* vérifier le mot de passe
             if(!password_verify($password,$data[0]["password_user"])){
                 
-                return "<span style='color: red'>*L'e-mail et/ou le mot de passe ne correspondent pas</span>";
+                return "<p><span style='color: red'>*L'e-mail et/ou le mot de passe ne correspondent pas</span></p>";
             }
             
             //*enregistrer le login dans $_SESSION

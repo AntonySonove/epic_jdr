@@ -18,9 +18,15 @@ class ModelCharacterList{
 
         try {
 
-            $req=$this->getBdd()->prepare("SELECT name_character,id_character,id_user FROM characters WHERE id_user=?");
+            $req=$this->getBdd()->prepare("SELECT name_character,id_character,c.id_user 
+            FROM characters as c
+            INNER JOIN users AS u
+            ON c.id_user= u.id_user
+            WHERE c.id_user=? AND email=? AND nickname=?");
     
             $req->bindParam(1,$_SESSION['id_user'],PDO::PARAM_INT);
+            $req->bindParam(2, $_SESSION["email"], PDO::PARAM_STR);
+            $req->bindParam(3, $_SESSION["nickname"], PDO::PARAM_STR);
     
             $req->execute();
     

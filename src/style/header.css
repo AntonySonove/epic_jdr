@@ -15,6 +15,9 @@ body{
 main{
     flex: 1;
 }
+a:visited{
+    color: white;
+}
 header{
     position: relative;
     z-index: 1;
@@ -68,10 +71,12 @@ header a{
     min-width: 150px;
     max-width: 150px;
     height: 50px;
-    background-color: #EBCBAD;
+    background-color: rgb(55, 55, 55);
     border: solid 1px #8000ff;
     border-radius: 3px;
     font-weight: bold;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,11 +84,18 @@ header a{
 .linkHeader a{
     min-width: 150px;
     min-height: 50px;
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.linkHeader:hover{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+}
+.logo:hover{
+    filter: drop-shadow(0 0 5px #8000ff);
 }
 .hideDropdown{
     display: none;
@@ -107,4 +119,9 @@ header a{
     #nav{
         display: flex;
     }   
+}
+@media (min-width: 992px){
+    #nav{
+        justify-content: space-around;
+    }
 }

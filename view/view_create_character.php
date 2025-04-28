@@ -33,21 +33,21 @@ class ViewCreateCharacter{
             </div>
 
             <div class="statInput">
-                <input id="inputName" type="text" name="name" placeholder="Nom">
+                <input class="inputFocus" id="inputName" type="text" name="name" placeholder="Nom">
 
-                <input type="number" name="lp" placeholder="0">
+                <input class="inputFocus" type="number" name="lp" placeholder="0">
 
-                <input type="number" name="mp" placeholder="0">
+                <input class="inputFocus" type="number" name="mp" placeholder="0">
 
-                <input type="number" name="atk" placeholder="0">
+                <input class="inputFocus" type="number" name="atk" placeholder="0">
 
-                <input type="number" name="def" placeholder="0">
+                <input class="inputFocus" type="number" name="def" placeholder="0">
 
-                <input type="number" name="atkm" placeholder="0">
+                <input class="inputFocus" type="number" name="atkm" placeholder="0">
 
-                <input type="number" name="defm" placeholder="0">
+                <input class="inputFocus" type="number" name="defm" placeholder="0">
 
-                <input type="number" name="speed" placeholder="0">
+                <input class="inputFocus" type="number" name="speed" placeholder="0">
                 
             </div>
         </div>

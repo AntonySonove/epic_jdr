@@ -27,8 +27,13 @@ class ControllerCharacterSheet{
     public function displayCharacter(): string{
 
         $character="";
+
         $data=$this->modelCharacterSheet->getOneCharacter();
+
+        $_SESSION["id_character"]= $data[0]["id_character"];
+        $_SESSION["name_character"]= $data[0]["name_character"];
         
+        var_dump($_SESSION);
         foreach($data as $row){
 
             $character=$character.'
@@ -59,13 +64,13 @@ class ControllerCharacterSheet{
                     </div>
 
                     <div class=newStat>
-                        <input type="number" name="lp" >
-                        <input type="number" name="mp" >
-                        <input type="number" name="atk" >
-                        <input type="number" name="def" >
-                        <input type="number" name="atkm" >
-                        <input type="number" name="defm" >
-                        <input type="number" name="speed" >  
+                        <input class="inputFocus" type="number" name="lp" >
+                        <input class="inputFocus" type="number" name="mp" >
+                        <input class="inputFocus" type="number" name="atk" >
+                        <input class="inputFocus" type="number" name="def" >
+                        <input class="inputFocus" type="number" name="atkm" >
+                        <input class="inputFocus" type="number" name="defm" >
+                        <input class="inputFocus" type="number" name="speed" >  
                     </div>
                 </div>
 

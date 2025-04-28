@@ -65,7 +65,7 @@ class ModelIndex{
     public function getByEmail():array | string{
         try{
     
-            $req=$this->getBdd()->prepare("SELECT id_user,nickname,email,password_user FROM users WHERE email=?");
+            $req=$this->getBdd()->prepare("SELECT id_user, nickname, email, password_user FROM users WHERE email=?");
     
             $email=$this->getEmail();
             
@@ -84,7 +84,7 @@ class ModelIndex{
     public function getByNickname():array | string{
         try{
     
-            $req=$this->getBdd()->prepare("SELECT id_user,nickname,email FROM users WHERE nickname=?");
+            $req=$this->getBdd()->prepare("SELECT id_user, nickname, email FROM users WHERE nickname=?");
     
             $nickname=$this->getNickname();
     

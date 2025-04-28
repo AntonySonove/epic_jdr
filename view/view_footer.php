@@ -1,10 +1,10 @@
-<footer>
-            <a href="#">mentions légales</a>
-            <a href="#">politique de confidentialité</a>
-            <a href="#">paramètre des cookies</a>
-            <a href="#">contact</a>
-        </footer>
-    </div>
+    <footer>
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Paramètre des cookies</a>
+        <a href="#">Contact</a>
+    </footer>
+    
     <script src="../src/script/header.js"></script>
     <script src="../src/script/play.js"></script>
 </body>

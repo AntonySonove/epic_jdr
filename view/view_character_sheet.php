@@ -16,7 +16,8 @@ class ViewCharacterSheet {
         return'
 <main class="mainCharacterSheet">
     '.$this->getCharacter().'      
-    '.$this->getModify().'      
+    '.$this->getModify().'
+       
 </main>
         ';
     }

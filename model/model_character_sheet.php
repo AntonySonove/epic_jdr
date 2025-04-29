@@ -81,14 +81,26 @@ class ModelCharacterSheet{
 
             $lp=$this->getLp();
             $mp=$this->getMp();
+            $atk=$this->getAtk();
+            $def=$this->getDef();
+            $atkm=$this->getAtkm();
+            $defm=$this->getDefm();
+            $speed=$this->getSpeed();
 
             $req=$this->getBdd()->prepare("UPDATE characters 
-            SET lp=$lp, mp=$mp 
+            SET lp=?, mp=?, atk=?, def=?, atkm=?, defm=?, speed=?
             WHERE name_character=? AND id_user=? AND id_character=?");
 
-            $req->bindParam(1,$_GET["name_character"],PDO::PARAM_STR);
-            $req->bindParam(2,$_SESSION["id_user"],PDO::PARAM_INT);
-            $req->bindParam(3,$_GET["id_character"],PDO::PARAM_INT);
+            $req->bindParam(1,$lp,PDO::PARAM_INT);
+            $req->bindParam(2,$mp,PDO::PARAM_INT);
+            $req->bindParam(3,$atk,PDO::PARAM_INT);
+            $req->bindParam(4,$def,PDO::PARAM_INT);
+            $req->bindParam(5,$atkm,PDO::PARAM_INT);
+            $req->bindParam(6,$defm,PDO::PARAM_INT);
+            $req->bindParam(7,$speed,PDO::PARAM_INT);
+            $req->bindParam(8,$_GET["name_character"],PDO::PARAM_STR);
+            $req->bindParam(9,$_SESSION["id_user"],PDO::PARAM_INT);
+            $req->bindParam(10,$_GET["id_character"],PDO::PARAM_INT);
             $req->execute();
 
             return "<span style='color:green'>*Modification(s) enregistrée(s)</span>";
@@ -96,10 +108,7 @@ class ModelCharacterSheet{
         }catch(PDOException $error){
             return $error->getMessage();
         }
-    }    
-
-
-    
+    }     
 }
 
 ?>

@@ -30,10 +30,6 @@ class ControllerCharacterSheet{
 
         $data=$this->modelCharacterSheet->getOneCharacter();
 
-        $_SESSION["id_character"]= $data[0]["id_character"];
-        $_SESSION["name_character"]= $data[0]["name_character"];
-        
-        var_dump($_SESSION);
         foreach($data as $row){
 
             $character=$character.'
@@ -94,7 +90,7 @@ class ControllerCharacterSheet{
             return "";
         }
         
-        if(empty($_POST["lp"]) && empty($_POST["mp"])){
+        if(empty($_POST["lp"]) && empty($_POST["mp"]) && empty($_POST["atk"]) && empty($_POST["def"]) && empty($_POST["atkm"]) && empty($_POST["defm"]) && empty($_POST["speed"])){
             
             return "<span style='color: red'>*Veuillez remplir au moins un champ</span>";
         }
@@ -110,15 +106,30 @@ class ControllerCharacterSheet{
             //* set les valeurs du tableau pour qu'il y ai des valeurs
             $character->setLp($data["lp"]);
             $character->setMp($data["mp"]);
+            $character->setAtk($data["atk"]);
+            $character->setDef($data["def"]);
+            $character->setAtkm($data["atkm"]);
+            $character->setDefm($data["defm"]);
+            $character->setSpeed($data["speed"]);
 
         }
 
         $lp=empty($_POST["lp"]) ? $character->getLp() : sanitize($_POST["lp"]);
         $mp=empty($_POST["mp"]) ? $character->getMp() : sanitize($_POST["mp"]);
+        $atk=empty($_POST["atk"]) ? $character->getAtk() : sanitize($_POST["atk"]);
+        $def=empty($_POST["def"]) ? $character->getDef() : sanitize($_POST["def"]);
+        $atkm=empty($_POST["atkm"]) ? $character->getAtkm() : sanitize($_POST["atkm"]);
+        $defm=empty($_POST["defm"]) ? $character->getDefm() : sanitize($_POST["defm"]);
+        $speed=empty($_POST["speed"]) ? $character->getSpeed() : sanitize($_POST["speed"]);
 
         $this->getModelCharacterSheet()
         ->setLp($lp)
-        ->setMp($mp);
+        ->setMp($mp)
+        ->setAtk($atk)
+        ->setDef($def)
+        ->setAtkm($atkm)
+        ->setDefm($defm)
+        ->setSpeed($speed);
         
 
         return $this->getModelCharacterSheet()->modify();

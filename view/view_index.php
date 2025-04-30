@@ -29,7 +29,7 @@ class ViewIndex{
     </div>
     
     <div class="signInSignUp">
-        <form class="welcome connexion" method="post">
+        <form id="signIn" class="welcome connexion" method="post">
             <h2>Connexion</h2>
             
             <input class="inputFocus" type="email" name="emailConnexion" placeholder="E-mail">
@@ -38,11 +38,11 @@ class ViewIndex{
 
             
             <input class="submitIndex" type="submit" name="submitConnexion" value="Continuer l\'aventure!"></input>     
+            '.$this->getMessageConnexion().'
         </form>
 
-        '.$this->getMessageConnexion().'
 
-        <form class="welcome connexion" method="post">
+        <form id="signUp" class="welcome connexion" method="post">
             <h2>Inscription</h2>
         
             <input class="inputFocus" type="text" name="nickname" placeholder="Pseudo">
@@ -54,10 +54,13 @@ class ViewIndex{
             <input class="inputFocus" type="password" name="password2" placeholder="Confirmer le mot de passe">
 
             <input class="submitIndex" type="submit" name="submit" value="Commencer l\'aventure!"></input>
+
+            <div id="passwordError" style="color:red"></div>
+
+            '.$this->getMessage().'
         </form>
     </div>
 
-    '.$this->getMessage().'
 </main>
         ';
     }

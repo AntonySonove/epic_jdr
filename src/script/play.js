@@ -27,10 +27,6 @@ function fetchCharacter(){
             let defm=data[0]["defm"];
             let speed=data[0]["speed"];
 
-            // let reset=[];
-            // reset.push(lp, mp, atk, def, atkm, defm, speed);
-            // console.log(reset);
-
             let currentLp=document.getElementById("currentLp");
             let currentMp=document.getElementById("currentMp");
             let currentAtk=document.getElementById("currentAtk");
@@ -70,7 +66,6 @@ function fetchCharacter(){
             const resetAtkm=document.getElementById("resetAtkm");
             const resetDefm=document.getElementById("resetDefm");
             const resetSpeed=document.getElementById("resetSpeed");
-            // const resetAll=document.getElementById("resetAll");
             
             let stats={
                 lp:[upLp, lp, currentLp, downLp, inputLp, resetLp],
@@ -82,6 +77,9 @@ function fetchCharacter(){
                 speed:[upSpeed, speed, currentSpeed, downSpeed, inputSpeed, resetSpeed]
                 
             };
+
+            let maxLpGauge=lp;
+            let maxMpGauge=mp;
 
             //! BOUCLE POUR LES OPERATIONS
 
@@ -114,12 +112,57 @@ function fetchCharacter(){
                         key[2].innerText=0;
                     }
                 });
-                console.log(key[5])
+                
                 key[5].addEventListener("click",()=>{
 
                     key[1]=lp;
                     key[2].innerText=key[1];
                 })
+            });
+
+            //! ANNIMATION DES JAUGES DE PV ET PM
+            
+            //* JAUGE PV
+            upLp.addEventListener("click", () => {
+
+                let currentLp=stats["lp"][1];
+                let pourcent=(currentLp/maxLpGauge)*100;
+
+                if(currentLp>maxLpGauge){
+                    pourcent=100;
+                }
+             
+                document.querySelector('.lpGauge div').style.width = pourcent + "%";
+            });
+            downLp.addEventListener("click", () => {
+
+                let currentLp=stats["lp"][1];
+                let pourcent=(currentLp/maxLpGauge)*100;
+
+                if(currentLp<0){
+                    pourcent=0;
+                }
+                if(currentLp>maxLpGauge){
+                    pourcent=100;
+                }
+
+                document.querySelector('.lpGauge div').style.width = pourcent + "%";
+            });
+
+            //* JAUGE MP
+            upMp.addEventListener("click", () => {
+
+                let currentMp=stats["mp"][1];
+                let pourcent=(currentMp/maxMpGauge)*100;
+
+                document.querySelector('.mpGauge div').style.width = pourcent + "%";
+            });
+            downMp.addEventListener("click", () => {
+
+                let currentMp=stats["mp"][1];
+                let pourcent=(currentMp/maxMpGauge)*100;
+
+                document.querySelector('.mpGauge div').style.width = pourcent + "%";
             });
         })
         .catch(error => {

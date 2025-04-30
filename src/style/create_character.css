@@ -53,6 +53,8 @@
 .return{
     display: flex;
     justify-content: end;
+}
+.return a:link, .return a:visited .return a:active{
     color: white;
 }
 @media(min-width: 576px){

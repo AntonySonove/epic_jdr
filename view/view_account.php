@@ -41,24 +41,27 @@ class ViewAccount{
 
                 <input class="inputFocus" type="text" name="nickname" placeholder="Nouveau pseudo">
                 <input class="submitIndex" type="submit" name="submitNickname" Value="Changer le pseudo">
+                '.$this->getNickname().'
             </form>
-            '.$this->getNickname().'
 
             <form class="formAccount" action="" method="post" >
 
                 <input class="inputFocus" type="email" name="email" placeholder="Nouvel email">
                 <input class="submitIndex" type="submit" name="submitEmail" Value="Changer l\'email">
+                '.$this->getEmail().'
             </form>
-            '.$this->getEmail().'
 
-            <form class="formAccount" action="" method="post">
+            <form id="formPassword" class="formAccount" action="" method="post">
                 
                 <input class="inputFocus" type="password" name="oldPassword" placeholder="Mot de passe actuel">
-                <input class="inputFocus" type="password" name="newPassword" placeholder="Nouveau Mot de passe">
+                <input id="changePassword" class="inputFocus" type="password" name="newPassword" placeholder="Nouveau Mot de passe">
                 <input class="inputFocus" type="password" name="newPassword2" placeholder="Confirmer le nouveau Mot de passe">
                 <input class="submitIndex" type="submit" name="submitPassword" value="Changer le mot de passe">
+
+                <div id="changePasswordError" style="color:red"></div>
+
+                '.$this->getPassword().'
             </form>
-            '.$this->getPassword().'
         </div>
     
 
@@ -66,8 +69,8 @@ class ViewAccount{
         <h2>Supprimer mon compte</h2>
         <input class="inputFocus" type="password" name="password" placeholder="Mot de passe">
         <input class="submitIndex" style="color: red" type="submit" name="submitDeleteAccount" value="Supprimer mon compte">
+        '.$this->getDelete().'
     </form>
-    '.$this->getDelete().'
 
 </main>
 

@@ -86,11 +86,18 @@ class ControllerPlay{
 
                 <h2 class="characterName">'.$row["name_character"].'</h2>
 
+                <div class="gauge">
+                    <div class="lpGauge"><div></div></div>
+                    <div class="mpGauge"><div></div></div>
+                </div>
+
                 <div class="playStat">
 
-                    <p>Points de vie</p>
-                    <button id="resetLp">↻</button>
-                    
+                    <div class="reset">
+                        <p>Points de vie</p>
+                        <button id="resetLp">↻</button>
+                    </div>
+
                     <div class=modifyStat>
                         <p id="currentLp">'.$row["lp"].'</p>
                         <div>
@@ -103,8 +110,10 @@ class ControllerPlay{
 
                 <div class="playStat">
 
-                    <p>Points de magie</p>
-                    <button id="resetMp">↻</button>
+                    <div class="reset">
+                        <p>Points de magie</p>
+                        <button id="resetMp">↻</button>
+                    </div>
 
                     <div class=modifyStat>
                         <p id="currentMp">'.$row["mp"].'</p>
@@ -118,9 +127,11 @@ class ControllerPlay{
 
                 <div class="playStat">
 
-                    <p>Attaque</p> 
-                    <button id="resetAtk">↻</button>
-                    
+                    <div class="reset">
+                        <p>Attaque</p> 
+                        <button id="resetAtk">↻</button>
+                    </div>
+
                     <div class=modifyStat>
                         <p id="currentAtk">'.$row["atk"].'</p>
                         <div>
@@ -133,8 +144,10 @@ class ControllerPlay{
 
                 <div class="playStat">
 
-                    <p>Défense</p>
-                    <button id="resetDef">↻</button>
+                    <div class="reset">
+                        <p>Défense</p>
+                        <button id="resetDef">↻</button>
+                    </div>
 
                     <div class=modifyStat>
                         <p id="currentDef">'.$row["def"].'</p>
@@ -148,8 +161,10 @@ class ControllerPlay{
 
                 <div class="playStat">
 
-                    <p>Attaque magique</p> 
-                    <p><button id="resetAtkm">↻</button></p>
+                    <div class="reset">
+                        <p>Attaque magique</p> 
+                        <button id="resetAtkm">↻</button>
+                    </div>
 
                     <div class=modifyStat>
                         <p id="currentAtkm">'.$row["atkm"].'</p>
@@ -163,8 +178,10 @@ class ControllerPlay{
 
                 <div class="playStat">
 
-                    <p>Défense magique</p>
-                    <button id="resetDefm">↻</button>
+                    <div class="reset">
+                        <p>Défense magique</p>
+                        <button id="resetDefm">↻</button>
+                    </div>
 
                     <div class=modifyStat>
                         <p id="currentDefm">'.$row["defm"].'</p>
@@ -178,8 +195,10 @@ class ControllerPlay{
 
                 <div class="playStat">
 
-                    <p>Vitesse</p>
-                    <button id="resetSpeed">↻</button>
+                    <div class="reset">
+                        <p>Vitesse</p>
+                        <button id="resetSpeed">↻</button>
+                    </div>
 
                     <div class=modifyStat>
                         <p id="currentSpeed">'.$row["speed"].'</p>

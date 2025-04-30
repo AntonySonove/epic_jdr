@@ -1,9 +1,9 @@
 <?php
     session_start();
-    include "../model/model_index.php";
-    include "../utils/utils.php";
-    include "../controller/controller_header.php";
-    include "../view/view_index.php";
+    // include "../model/model_index.php";
+    // include "../utils/utils.php";
+    // include "../controller/controller_header.php";
+    // include "../view/view_index.php";
 
 class ControllerIndex{
 
@@ -129,7 +129,7 @@ class ControllerIndex{
             $_SESSION["email"] = $data[0]["email"];
 
             //* redirection vers la page Mon compte
-            header("Location:../controller/controller_account.php");
+            header("Location:/repository/epic_jdr/account");
         }
         return "";
     }
@@ -145,9 +145,8 @@ class ControllerIndex{
     }
 }
     
-$index=new ControllerIndex(new ModelIndex, new ViewIndex);
+// $index=new ControllerIndex(new ModelIndex, new ViewIndex);
 
-$index->render();
+// $index->render();
 
-include "../view/view_footer.php";
-?>
+// include "../view/view_footer.php";

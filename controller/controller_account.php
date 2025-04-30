@@ -1,10 +1,10 @@
 <?php
-session_start();
-include "../model/model_account.php";
-include "../model/model_index.php";
-include "../utils/utils.php";
-include "../controller/controller_header.php";
-include "../view/view_account.php";
+// session_start();
+// include "../model/model_account.php";
+// include "../model/model_index.php";
+// include "../utils/utils.php";
+// include "../controller/controller_header.php";
+// include "../view/view_account.php";
 
 class ControllerAccount{
     private ?ViewAccount $viewAccount;
@@ -178,8 +178,8 @@ class ControllerAccount{
         ->displayView();
     }
 }
-$account=new ControllerAccount(new ViewAccount, new ModelAccount(),new ModelIndex());
+// $account=new ControllerAccount(new ViewAccount, new ModelAccount(),new ModelIndex());
 
-$account->render();
+// $account->render();
      
-include "../view/view_footer.php";
+// include "../view/view_footer.php";

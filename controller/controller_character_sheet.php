@@ -1,9 +1,9 @@
 <?php
-session_start();
-include "../utils/utils.php";
-include "../model/model_character_sheet.php";
-include "../controller/controller_header.php";
-include "../view/view_character_sheet.php";
+// session_start();
+// include "../utils/utils.php";
+// include "../model/model_character_sheet.php";
+// include "../controller/controller_header.php";
+// include "../view/view_character_sheet.php";
 
 class ControllerCharacterSheet{
     //! attributs
@@ -76,7 +76,7 @@ class ControllerCharacterSheet{
             </form>
 
             <div class="return">
-                <a href="../controller/controller_character_list.php?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'"">Retour</a>
+                <a href="/repository/epic_jdr/list?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'"">Retour</a>
             </div>
             ';
         }
@@ -148,11 +148,11 @@ class ControllerCharacterSheet{
     }  
 }
 
-$CharacterSheet=new ControllerCharacterSheet(new ModelCharacterSheet(), new ViewCharacterSheet());
+// $CharacterSheet=new ControllerCharacterSheet(new ModelCharacterSheet(), new ViewCharacterSheet());
 
-$CharacterSheet->render();
+// $CharacterSheet->render();
 
-include "../view/view_footer.php";
+// include "../view/view_footer.php";
 ?>
 
 

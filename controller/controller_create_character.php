@@ -1,9 +1,9 @@
 <?php
-session_start();
-include "../utils/utils.php";
-include "../model/model_create_character.php";
-include "../controller/controller_header.php";
-include "../view/view_create_character.php";
+// session_start();
+// include "../utils/utils.php";
+// include "../model/model_create_character.php";
+// include "../controller/controller_header.php";
+// include "../view/view_create_character.php";
 
 
 class ControllerCreateCharacter{
@@ -81,9 +81,7 @@ class ControllerCreateCharacter{
     }
 }
 
-$CreateCharacter=new ControllerCreateCharacter(new ModelCreateCharacter(), new ViewCreateCharacter());
-$CreateCharacter->render();
+// $CreateCharacter=new ControllerCreateCharacter(new ModelCreateCharacter(), new ViewCreateCharacter());
+// $CreateCharacter->render();
 
-
-include "../view/view_footer.php";
-?>
+// include "../view/view_footer.php";

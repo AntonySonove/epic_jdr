@@ -1,9 +1,9 @@
 <?php
-    session_start();
-    include "../model/model_character_list.php";
-    include "../utils/utils.php";
-    include "../controller/controller_header.php";
-    include "../view/view_character_list.php";
+    // session_start();
+    // include "../utils/utils.php";
+    // include "../model/model_character_list.php";
+    // include "../controller/controller_header.php";
+    // include "../view/view_character_list.php";
 
 class ControllerCharacterList{
 
@@ -39,9 +39,9 @@ class ControllerCharacterList{
                 <p>'.$row["name_character"].'</p>
 
                 <div>
-                    <a href="../controller/controller_character_sheet.php?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Fiche</a>
+                    <a href="/repository/epic_jdr/sheet?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Fiche</a>
 
-                    <a href="../controller/controller_play.php?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Jouer</a>
+                    <a href="/repository/epic_jdr/play?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Jouer</a>
                 </div>
             </article>
             ';
@@ -62,10 +62,10 @@ class ControllerCharacterList{
     }
 }
 
-$characterList=new ControllerCharacterList(new ModelCharacterList,new ViewCharacterList);
+// $characterList=new ControllerCharacterList(new ModelCharacterList,new ViewCharacterList);
 
-$characterList->render();
+// $characterList->render();
     
 
-include "../view/view_footer.php";
+// include "../view/view_footer.php";
 ?> 

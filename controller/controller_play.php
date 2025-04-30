@@ -1,14 +1,14 @@
 <?php
-session_start();
-    include "../model/model_character_sheet.php";
-    include "../model/model_play.php";
-    include "../utils/utils.php";
-    include "../controller/controller_header.php";
-    include "../view/view_play.php";
+// session_start();
+//     include "../model/model_character_sheet.php";
+//     include "../model/model_play.php";
+//     include "../utils/utils.php";
+//     include "../controller/controller_header.php";
+//     include "../view/view_play.php";
 
 class ControllerPlay{
     private ViewPlay $viewPlay;
-    private ModelPlay $ModelPlay;
+    private ModelPlay $modelPlay;
     private ModelCharacterSheet $modelCharacterSheet;
 
     public function __construct(ViewPlay $viewPlay, ModelPlay $modelPlay, ModelCharacterSheet $modelCharacterSheet){
@@ -21,8 +21,8 @@ class ControllerPlay{
     public function getViewPlay(): ViewPlay { return $this->viewPlay; }
     public function setViewPlay(ViewPlay $viewPlay): self { $this->viewPlay = $viewPlay; return $this; }
 
-    public function getModelPlay(): ModelPlay { return $this->ModelPlay; }
-    public function setModelPlay(ModelPlay $ModelPlay): self { $this->ModelPlay = $ModelPlay; return $this; }
+    public function getModelPlay(): ModelPlay { return $this->modelPlay; }
+    public function setModelPlay(ModelPlay $modelPlay): self { $this->modelPlay = $modelPlay; return $this; }
 
     public function getModelCharacterSheet(): ModelCharacterSheet { return $this->modelCharacterSheet; }
     public function setModelCharacterSheet(ModelCharacterSheet $modelCharacterSheet): self { $this->modelCharacterSheet = $modelCharacterSheet; return $this; }
@@ -95,7 +95,7 @@ class ControllerPlay{
 
                     <div class="reset">
                         <p>Points de vie</p>
-                        <button id="resetLp">↻</button>
+                        <button id="resetLp2">↻</button>
                     </div>
 
                     <div class=modifyStat>
@@ -112,7 +112,7 @@ class ControllerPlay{
 
                     <div class="reset">
                         <p>Points de magie</p>
-                        <button id="resetMp">↻</button>
+                        <button id="resetMp2">↻</button>
                     </div>
 
                     <div class=modifyStat>
@@ -129,7 +129,7 @@ class ControllerPlay{
 
                     <div class="reset">
                         <p>Attaque</p> 
-                        <button id="resetAtk">↻</button>
+                        <button id="resetAtk2">↻</button>
                     </div>
 
                     <div class=modifyStat>
@@ -146,7 +146,7 @@ class ControllerPlay{
 
                     <div class="reset">
                         <p>Défense</p>
-                        <button id="resetDef">↻</button>
+                        <button id="resetDef2">↻</button>
                     </div>
 
                     <div class=modifyStat>
@@ -163,7 +163,7 @@ class ControllerPlay{
 
                     <div class="reset">
                         <p>Attaque magique</p> 
-                        <button id="resetAtkm">↻</button>
+                        <button id="resetAtkm2">↻</button>
                     </div>
 
                     <div class=modifyStat>
@@ -180,7 +180,7 @@ class ControllerPlay{
 
                     <div class="reset">
                         <p>Défense magique</p>
-                        <button id="resetDefm">↻</button>
+                        <button id="resetDefm2">↻</button>
                     </div>
 
                     <div class=modifyStat>
@@ -197,7 +197,7 @@ class ControllerPlay{
 
                     <div class="reset">
                         <p>Vitesse</p>
-                        <button id="resetSpeed">↻</button>
+                        <button id="resetSpeed2">↻</button>
                     </div>
 
                     <div class=modifyStat>
@@ -225,8 +225,8 @@ class ControllerPlay{
     }
 }
 
-$play=new ControllerPlay(new ViewPlay, new ModelPlay(), new ModelCharacterSheet());
+// $play=new ControllerPlay(new ViewPlay, new ModelPlay(), new ModelCharacterSheet());
 
-$play->render();
+// $play->render();
 
-include "../view/view_footer.php";
+// include "../view/view_footer.php";

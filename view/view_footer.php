@@ -5,9 +5,9 @@
         <a href="#">Contact</a>
     </footer>
     
-    <script src="../src/script/header.js"></script>
-    <script src="../src/script/index.js"></script>
-    <script src="../src/script/account.js"></script>
-    <script src="../src/script/play.js"></script>
+    <script src="/repository/epic_jdr/src/script/header.js"></script>
+    <script src="/repository/epic_jdr/src/script/index.js"></script>
+    <script src="/repository/epic_jdr/src/script/account.js"></script>
+    <script src="/repository/epic_jdr/src/script/play.js"></script>
 </body>
 </html>

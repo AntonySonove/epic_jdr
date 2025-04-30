@@ -4,6 +4,6 @@
     //* destruction de la session enregistrée dans $_SESSION
     session_destroy();
     //* redirection
-    header("location:controller_index.php");
+    header("location:/repository/epic_jdr/");
     exit();
 ?>

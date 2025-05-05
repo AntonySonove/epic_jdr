@@ -20,6 +20,11 @@
 .welcome h2, .welcome h1{
     text-align: center;
 }
+.signInSignUp{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
 .submitIndex{
     background-color: rgb(55, 55, 55);
     color: white;
@@ -52,6 +57,12 @@
     border: solid 1px rgb(0, 150, 255);
     outline: none;
 }
+.passwordError{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
 
 @media(min-width: 576px){
     .mainIndex{
@@ -64,9 +75,8 @@
     }
     .signInSignUp{
         width: 100%;
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        gap: 25px;
     }
     .connexion{
         width: 100%;

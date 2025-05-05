@@ -145,7 +145,7 @@ function fetchCharacter(){
                     pourcent=100;
                 }
              
-                document.querySelector('.lpGauge div').style.width = pourcent + "%";
+                document.querySelector('#greenLp').style.width = pourcent + "%";
             });
             downLp.addEventListener("click", () => {
 

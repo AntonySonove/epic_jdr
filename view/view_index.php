@@ -12,16 +12,19 @@ class ViewIndex{
 
    public function getMessageConnexion(): ?string { return $this->messageConnexion; }
    public function setMessageConnexion(?string $messageConnexion): self { $this->messageConnexion = $messageConnexion; return $this; }
-
-//    public function getMessageDelete(): ?string { return $this->messageDelete; }
-//    public function setMessageDelete(?string $messageDelete): self { $this->messageDelete = $messageDelete; return $this; }
-    
-    //! method
-    public function displayView(){
-    
-        return '
-
-<main class="mainIndex">
+   
+   //    public function getMessageDelete(): ?string { return $this->messageDelete; }
+   //    public function setMessageDelete(?string $messageDelete): self { $this->messageDelete = $messageDelete; return $this; }
+   
+   //! method
+   public function displayView(){
+       
+       return '
+       
+    <main class="mainIndex">
+       
+    '.$this->getMessageConnexion().'
+    '.$this->getMessage().'
 
     <div class="welcome">
         <h1>Bienvenue sur EPIC JDR</h1>
@@ -38,7 +41,6 @@ class ViewIndex{
 
             
             <input class="submitIndex" type="submit" name="submitConnexion" value="Continuer l\'aventure!"></input>     
-            '.$this->getMessageConnexion().'
         </form>
 
 
@@ -53,12 +55,11 @@ class ViewIndex{
 
             <input class="inputFocus" type="password" name="password2" placeholder="Confirmer le mot de passe">
 
+            
             <input class="submitIndex" type="submit" name="submit" value="Commencer l\'aventure!"></input>
 
+            </form>
             <div id="passwordError" style="color:red"></div>
-
-            '.$this->getMessage().'
-        </form>
     </div>
 
 </main>

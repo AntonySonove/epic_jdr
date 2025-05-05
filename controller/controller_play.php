@@ -87,7 +87,7 @@ class ControllerPlay{
                 <h2 class="characterName">'.$row["name_character"].'</h2>
 
                 <div class="gauge">
-                    <div class="lpGauge"><div></div></div>
+                    <div class="lpGauge"><div id="greenLp"><div id="yellowLp"></div></div></div>
                     <div class="mpGauge"><div></div></div>
                 </div>
 

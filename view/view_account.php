@@ -32,45 +32,56 @@ class ViewAccount{
 
     <h2>Mon compte</h2>
     
+    '.$this->getNickname().'
+    '.$this->getEmail().'
+    '.$this->getPassword().'
+    '.$this->getDelete().'
+
         '.$this->getUser().'
         
-        <div class="welcome modifyAccount">
+        <div class="welcome">
             <h2>Modifier les information du compte</h2>
 
             <form class="formAccount" action="" method="post" >
 
                 <input class="inputFocus" type="text" name="nickname" placeholder="Nouveau pseudo">
+
                 <input class="submitIndex" type="submit" name="submitNickname" Value="Changer le pseudo">
-                '.$this->getNickname().'
             </form>
 
             <form class="formAccount" action="" method="post" >
 
                 <input class="inputFocus" type="email" name="email" placeholder="Nouvel email">
+
                 <input class="submitIndex" type="submit" name="submitEmail" Value="Changer l\'email">
-                '.$this->getEmail().'
             </form>
 
             <form id="formPassword" class="formAccount" action="" method="post">
                 
                 <input class="inputFocus" type="password" name="oldPassword" placeholder="Mot de passe actuel">
+
                 <input id="changePassword" class="inputFocus" type="password" name="newPassword" placeholder="Nouveau Mot de passe">
                 <input class="inputFocus" type="password" name="newPassword2" placeholder="Confirmer le nouveau Mot de passe">
+
+
                 <input class="submitIndex" type="submit" name="submitPassword" value="Changer le mot de passe">
-
-                <div id="changePasswordError" style="color:red"></div>
-
-                '.$this->getPassword().'
+                
             </form>
-        </div>
-    
 
-    <form action="" method="post" class="welcome formAccount">
+        </div>
+            
+        <div id="changePasswordError" style="color:red"></div>
+
+    <div class="welcome">
         <h2>Supprimer mon compte</h2>
-        <input class="inputFocus" type="password" name="password" placeholder="Mot de passe">
-        <input class="submitIndex" style="color: red" type="submit" name="submitDeleteAccount" value="Supprimer mon compte">
-        '.$this->getDelete().'
-    </form>
+
+        <form action="" method="post" class="formAccount">
+
+            <input class="inputFocus" type="password" name="password" placeholder="Mot de passe">
+
+            <input class="submitIndex" style="color: red" type="submit" name="submitDeleteAccount" value="Supprimer mon compte">
+        </form>
+    </div>
 
 </main>
 

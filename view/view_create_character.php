@@ -60,7 +60,7 @@ class ViewCreateCharacter{
     '.$this->getMessage().'
     
     <div class="return">
-        <a href="../controller/controller_account.php">Retour</a>
+        <a href="/repository/epic_jdr/account">Retour</a>
     </div>
 
 </main>';

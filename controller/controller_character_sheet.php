@@ -70,14 +70,22 @@ class ControllerCharacterSheet{
                     </div>
                 </div>
 
-                <div class="modify">
+                <div class="options">
+
+                    <div></div>
+
+                    <a href="/repository/epic_jdr/play?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Jouer</a>
+
+                    
                     <input type="submit" name="submit" value="Modifier">
-                </div> 
+                    
+                </div>
             </form>
 
             <div class="return">
                 <a href="/repository/epic_jdr/list?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'"">Retour</a>
             </div>
+
             ';
         }
         

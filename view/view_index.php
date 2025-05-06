@@ -58,9 +58,9 @@ class ViewIndex{
             
             <input class="submitIndex" type="submit" name="submit" value="Commencer l\'aventure!"></input>
 
-            </form>
-            <div id="passwordError" style="color:red"></div>
+        </form>
     </div>
+    <div id="passwordError" style="color:red"></div>
 
 </main>
         ';

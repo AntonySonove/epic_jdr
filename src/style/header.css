@@ -72,7 +72,7 @@ header a{
     max-width: 150px;
     height: 50px;
     background-color: rgb(55, 55, 55);
-    border: solid 1px #8000ff;
+    border: solid 1px #8000FF;
     border-radius: 3px;
     font-weight: bold;
     filter: drop-shadow(0 0 5px rgb(0, 0, 0));
@@ -95,7 +95,7 @@ header a{
     border: solid 1px rgb(255, 100, 0);
 }
 .logo:hover{
-    filter: drop-shadow(0 0 5px #8000ff);
+    filter: drop-shadow(0 0 5px #8000FF);
 }
 .hideDropdown{
     display: none;

@@ -7,7 +7,7 @@
 }
 .welcome{
     background-color: rgb(25, 25, 25);
-    border: solid 1px #8000ff;
+    border: solid 1px #8000FF;
     border-radius: 3px;
     filter: drop-shadow(0 0 5px rgb(0, 0, 0));
     padding: 25px;
@@ -28,7 +28,7 @@
 .submitIndex{
     background-color: rgb(55, 55, 55);
     color: white;
-    border: solid 1px #8000ff;
+    border: solid 1px #8000FF;
     border-radius: 3px;
     padding: 10px;
     font-weight: bold;
@@ -54,8 +54,8 @@
     border: solid 1px rgba(0, 149, 255, 0);
 }
 .inputFocus:focus{
-    filter: drop-shadow(0 0 5px rgb(0, 150, 255));
-    border: solid 1px rgb(0, 150, 255);
+    filter: drop-shadow(0 0 5px #4747FF);
+    border: solid 1px #3333FF;
     outline: none;
 }
 .passwordError{

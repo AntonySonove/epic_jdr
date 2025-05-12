@@ -14,7 +14,7 @@
 }
 .gridCharacterList article{
     background-color: rgb(25, 25, 25);
-    border: solid 1px #8000ff;
+    border: solid 1px #8000FF;
     border-radius: 3px;
     filter: drop-shadow(0 0 5px rgb(0, 0, 0));
     padding: 25px;
@@ -30,7 +30,7 @@
 }
 .gridCharacterList article div a{
     background-color: rgb(55, 55, 55);
-    border: solid 1px #8000ff;
+    border: solid 1px #8000FF;
     border-radius: 3px;
     filter: drop-shadow(0 0 5px rgb(0, 0, 0));
 

@@ -34,7 +34,7 @@
 .submitCreateCharacter input{
     background-color: rgb(55, 55, 55);
     color: white;
-    border: solid 1px #8000ff;
+    border: solid 1px #8000FF;
     border-radius: 3px;
     padding: 10px;
     font-weight: bold;

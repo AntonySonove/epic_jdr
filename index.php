@@ -1,4 +1,18 @@
+
 <?php
+// #Activation du rewrite des URL
+// RewriteEngine On
+
+// #base du projet (emplacement à partir de la racine du serveur)
+// RewriteBase /repository/epic_jdr/
+
+// #si ce n'est pas un répertoire
+// RewriteCond %{REQUEST_FILENAME} !-d
+
+// # Si ce n'est pas un fichier
+// RewriteCond %{REQUEST_FILENAME} !-f
+
+// RewriteRule ^(.+)$ index.php [QSA,L]
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);

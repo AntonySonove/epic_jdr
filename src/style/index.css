@@ -1,0 +1,108 @@
+.mainIndex{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    color: white;
+}
+.welcome{
+    background-color: rgb(25, 25, 25);
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    padding: 25px;
+    
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.welcome h2, .welcome h1{
+    text-align: center;
+}
+.signInSignUp{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.submitIndex{
+    background-color: rgb(55, 55, 55);
+    color: white;
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    max-width: 200px;
+}
+.submitIndex:hover{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+}
+.submitIndex:focus{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+    outline: none;
+}
+.connexion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.inputFocus{
+    border: solid 1px rgba(0, 149, 255, 0);
+}
+.inputFocus:focus{
+    filter: drop-shadow(0 0 5px #4747FF);
+    border: solid 1px #3333FF;
+    outline: none;
+}
+.passwordError{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+@media(min-width: 576px){
+    .mainIndex{
+        padding: 25px 100px;
+    }
+}
+@media(min-width: 768px){
+    .mainIndex{
+        padding: 25px;
+    }
+    .signInSignUp{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .connexion{
+        width: 100%;
+    }
+}
+@media(min-width: 992px){
+    .mainIndex{
+        padding: 25px 100px;
+    }
+}
+@media(min-width: 1200px){
+    .mainIndex{
+        padding: 25px 200px;
+    }
+    .welcome{
+        padding: 25px 50px;
+    }
+}
+@media(min-width: 1400px){
+    .mainIndex{
+        padding: 25px 300px;
+    }
+}
+@media(min-width: 1600px){
+    .welcome{
+        padding: 25px 100px;
+    }
+}

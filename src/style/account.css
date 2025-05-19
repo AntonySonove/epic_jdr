@@ -1,0 +1,34 @@
+.mainAccount{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    color: white;
+}
+.formAccount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+@media(min-width: 576px){
+    .mainAccount{
+        padding: 25px 100px;
+    }
+}
+@media(min-width: 768px){
+    .mainAccount{
+        padding: 25px 200px;
+    }
+}
+@media(min-width: 1200px){
+    .mainAccount{
+        padding: 25px 300px;
+    }
+}
+@media(min-width: 1400px){
+    .mainAccount{
+        padding: 25px 400px;
+    }
+}

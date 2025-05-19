@@ -1,0 +1,80 @@
+.mainCreateCharacter{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 5px;
+    color: white;
+}
+.formCreateCharacter{
+    display: flex;
+    justify-content: space-between;
+}
+.formCreateCharacter div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.statInput{
+    align-items: end;
+}
+.formCreateCharacter input{
+    width: 40px;
+}
+#inputName{
+    min-width: 150px;
+}
+#inputName:focus{
+    outline: none;
+}
+.submitCreateCharacter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.submitCreateCharacter input{
+    background-color: rgb(55, 55, 55);
+    color: white;
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.submitCreateCharacter input:hover{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+    
+}
+.submitCreateCharacter input:focus{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+    outline: none;
+}
+.return{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+.return a:link, .return a:visited .return a:active{
+    color: white;
+}
+@media(min-width: 576px){
+    .mainCreateCharacter{
+        padding: 25px 100px
+    }
+}
+@media(min-width: 768px){
+    .mainCreateCharacter{
+        padding: 25px 200px
+    }
+}
+@media(min-width: 1200px){
+    .mainCreateCharacter{
+        padding: 25px 300px
+    }
+}
+@media(min-width: 1400px){
+    .mainCreateCharacter{
+        padding: 25px 400px
+    }
+}

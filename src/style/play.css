@@ -1,0 +1,208 @@
+.mainPlay{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 5px;
+    color: white;
+}
+.playStat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.characterSheetPlay{
+    position: relative;
+    padding: 25px 10px;
+    gap: 15px;
+}
+#burgerMenuPlay{
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: absolute;
+}
+.gauge{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.lpGauge, .mpGauge{
+    width: 100%;
+    height: 15px;
+
+    background-color: rgb(55, 55, 55);
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    border-radius: 3px;
+    border: solid 1px black;
+
+    
+}
+#greenLp{
+    width: 100%;
+    height: 15px;
+    background-color: green;
+    border-radius: 3px;
+    transition: width 0.1s ease-in-out;
+}
+.mpGauge div{
+    width: 100%;
+    height: 15px;
+    background-color: #3333FF;
+    border-radius: 3px;
+    transition: width 0.1s ease-in-out;
+}
+#dropdownPlay{
+    background-color: rgb(55, 55, 55);
+    gap: 15px;
+    padding: 25px 25px;
+    
+    position: absolute;
+    left: 1px;
+    top: 80px;
+
+    flex-direction: column;
+    justify-content: space-between;
+    
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    z-index: 2;
+}
+#dropdownPlay div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+#dropdownPlay div button{
+    width: 35px;
+    height: 35px;
+
+    background-color: rgb(25, 25, 25);
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+.reset{
+    display: flex;
+    align-items: center;
+    gap: 1px
+}
+.reset p{
+    min-width: 130px;
+}
+.reset button{
+    width: 35px;
+    height: 35px;
+
+    background-color: rgb(55, 55, 55);
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+.modifyStat{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.modifyStat p{
+    min-width: 25px;
+    text-align: right;
+}
+.modifyStat div{
+    display: flex;
+    gap: 1px;
+}
+.modifyStat div input{
+    width: 35px;
+}
+.modifyStat div input::-webkit-outer-spin-button,
+.modifyStat div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.modifyStat div button{
+    width: 35px;
+    height: 35px;
+
+    background-color: rgb(55, 55, 55);
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+#upLp:hover, #upMp:hover, #upAtk:hover, #updef:hover, #upAtkm:hover, #upDefm:hover, #upSpeed:hover{
+    filter: drop-shadow(0 0 5px rgb(0, 255, 0));
+    border: solid 1px rgb(0, 255, 0);
+}
+#upLp:focus, #upMp:focus, #upAtk:focus, #updef:focus, #upAtkm:focus, #upDefm:focus, #upSpeed:focus{
+    filter: drop-shadow(0 0 5px rgb(0, 255, 0));
+    border: solid 1px rgb(0, 255, 0);
+    outline: none;
+}
+#downLp:hover, #downMp:hover, #downAtk:hover, #downdef:hover, #downAtkm:hover, #downDefm:hover, #downSpeed:hover{
+    filter: drop-shadow(0 0 5px rgb(255, 0, 0));
+    border: solid 1px rgb(255, 0, 0);
+}
+#downLp:focus, #downMp:focus, #downAtk:focus, #downdef:focus, #downAtkm:focus, #downDefm:focus, #downSpeed:focus{
+    filter: drop-shadow(0 0 5px rgb(255, 0, 0));
+    border: solid 1px rgb(255, 0, 0);
+    outline: none;
+}
+
+@media(max-width: 375px){
+    .reset button{
+        display: none
+    }
+    #burgerMenuPlay{
+        display: flex;
+    }
+}
+@media(min-width: 576px){
+    .mainPlay{
+        padding: 25px 50px
+    }
+    .modifyStat{
+        gap: 25px;
+    }
+    .reset{
+        gap: 15px
+    }
+}
+@media(min-width: 768px){
+    .mainPlay{
+        padding: 25px 100px
+    }
+    .characterSheetPlay{
+        padding: 25px 50px;
+    }
+}
+@media(min-width: 992px){
+    .mainPlay{
+        padding: 25px 200px;
+    }
+}
+@media(min-width: 1200px){
+    .mainPlay{
+        padding: 25px 300px
+    }
+    .modifyStat{
+        gap: 75px;
+    }
+}
+@media(min-width: 1400px){
+    .characterSheetPlay{
+        padding: 25px 75px;
+        max-width: 800px;
+        width: 100%;
+    }
+    .modifyStat{
+        gap: 75px;
+    }
+    .mainPlay{
+        align-items: center;
+    }
+}

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: "instrument", sans-serif;
+}
+body{
+    background-color: rgb(55, 55, 55);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 375px;
+}
+main{
+    flex: 1;
+}
+a:visited{
+    color: white;
+}
+header{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(25, 25, 25);
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+}
+.logo{
+    height: 100%;
+}
+.burgerMenu{
+    width: 100%;
+    height: 6px;
+    background-color: white;
+    border-radius: 3px;
+}
+#burgerMenuButton{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: 25px;
+}
+header a{
+    text-decoration: none;   
+}
+#dropdownHeader{
+    width: 150px;
+    height: 335px;
+    background-color: rgb(25, 25, 25);
+    gap: 25px;
+    padding: 25px 25px;
+    
+    position: absolute;
+    right: 0px;
+    top: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    z-index: 2;
+}
+.linkHeader{
+    min-width: 150px;
+    max-width: 150px;
+    height: 50px;
+    background-color: rgb(55, 55, 55);
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkHeader a{
+    min-width: 150px;
+    min-height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.linkHeader:hover{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+}
+.logo:hover{
+    filter: drop-shadow(0 0 5px #8000FF);
+}
+.hideDropdown{
+    display: none;
+}
+.showDropdown{
+    display: flex;
+}
+#nav{
+    width: 100%;
+    justify-content: space-between;
+    display: none;
+    margin: 0px 25px;
+}
+@media (min-width: 992px){
+    #burgerMenuButton{
+        display: none;
+    }
+    #dropdownHeader{
+        display: none;
+    }
+    #nav{
+        display: flex;
+    }   
+}
+@media (min-width: 992px){
+    #nav{
+        justify-content: space-around;
+    }
+}

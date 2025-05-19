@@ -1,0 +1,71 @@
+.mainCharacterList{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    color: white;
+}
+.gridCharacterList{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 25px;
+}
+.gridCharacterList article{
+    background-color: rgb(25, 25, 25);
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+    padding: 25px;
+
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    align-items: center;
+}
+.gridCharacterList article div{
+    display: flex;
+    gap: 25px;
+}
+.gridCharacterList article div a{
+    background-color: rgb(55, 55, 55);
+    border: solid 1px #8000FF;
+    border-radius: 3px;
+    filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+
+    text-decoration: none;
+    color: white;
+
+    padding: 10px;
+}
+.gridCharacterList article div a:hover{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+}
+.gridCharacterList article div a:focus{
+    filter: drop-shadow(0 0 5px rgb(255, 100, 0));
+    border: solid 1px rgb(255, 100, 0);
+    outline: none;
+}
+
+@media(min-width: 576px){
+    .gridCharacterList{
+        grid-template-columns: 1fr 1fr;  
+        }
+}
+@media(min-width: 768px){
+    .mainCharacterList{
+        padding: 25px 100px
+    }
+}
+@media(min-width: 992px){
+    .gridCharacterList{
+        grid-template-columns: 1fr 1fr 1fr;  
+        }
+}
+@media(min-width: 1200px){
+    .gridCharacterList{
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+    }
+}

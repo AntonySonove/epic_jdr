@@ -1,4 +1,3 @@
-a
 <?php
 // session_start();
 //     include "../model/model_character_sheet.php";

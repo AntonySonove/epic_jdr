@@ -1,4 +1,3 @@
-aaaaa
 <?php
 // #Activation du rewrite des URL
 // RewriteEngine On

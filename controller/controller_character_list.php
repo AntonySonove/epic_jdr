@@ -68,4 +68,3 @@ class ControllerCharacterList{
     
 
 // include "../view/view_footer.php";
-?> 

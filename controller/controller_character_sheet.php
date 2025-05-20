@@ -29,7 +29,8 @@ class ControllerCharacterSheet{
         $character="";
 
         $data=$this->modelCharacterSheet->getOneCharacter();
-        $_SESSION["id_character"]="";
+        $_SESSION["id_character"]=$_GET["id_character"];
+        $_SESSION["name_character"]=$_GET["name_character"];
 
         foreach($data as $row){
 
@@ -73,12 +74,11 @@ class ControllerCharacterSheet{
 
                 <div class="options">
 
-                    <input style="color: red" type="submit" name="delete" value="Supprimer">
-
                     <a href="/repository/epic_jdr/play?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Jouer</a>
-
+                    
                     <input type="submit" name="submit" value="Modifier">
                     
+                    <input style="color: red" type="submit" name="delete" value="Supprimer">
                 </div>
             </form>
 

@@ -29,13 +29,8 @@ class ControllerPlay{
 
     public function displayCharacter(): string{
 
-        if (isset($_GET['name_character'])) {
-            $_SESSION['name_character'] = $_GET['name_character'];
-        }
-        
-        if (isset($_GET['id_character'])) {
-            $_SESSION['id_character'] = $_GET['id_character'];
-        }
+        $_SESSION["id_character"]=$_GET["id_character"];
+        $_SESSION["name_character"]=$_GET["name_character"];
 
         $character="";
 

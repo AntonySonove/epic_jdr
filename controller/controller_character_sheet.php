@@ -74,9 +74,9 @@ class ControllerCharacterSheet{
 
                 <div class="options">
 
-                    <a href="/repository/epic_jdr/play?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Jouer</a>
-                    
                     <input type="submit" name="submit" value="Modifier">
+
+                    <a href="/repository/epic_jdr/play?name_character='.$row["name_character"].'&id_user='.$_SESSION["id_user"].'&id_character='.$row["id_character"].'">Jouer</a>
                     
                     <input style="color: red" type="submit" name="delete" value="Supprimer">
                 </div>
@@ -92,7 +92,7 @@ class ControllerCharacterSheet{
         return $character;
     }
 
-    public function modify():string{
+    public function modifyCharacter():string{
 
         if(!isset($_POST["submit"])){
             return "";
@@ -106,30 +106,35 @@ class ControllerCharacterSheet{
         
         //! dans le cas ou une seule stat va être modifiée
         $character=$this->getModelCharacterSheet(); //? récupérer l'objet 
+
         $data=$character->getOneCharacter(); //? récupérere un tableau
-     
-        if (is_array($data) && count($data) > 0) {
+            
+        $data = $data[0]; //? car fetchAll() retourne un tableau de tableaux
+        
+        //* set les valeurs du tableau pour qu'il y ai des valeurs
+        $character->setLp($data["lp"]);
+        $character->setMp($data["mp"]);
+        $character->setAtk($data["atk"]);
+        $character->setDef($data["def"]);
+        $character->setAtkm($data["atkm"]);
+        $character->setDefm($data["defm"]);
+        $character->setSpeed($data["speed"]);
 
-            $data = $data[0]; //? car fetchAll() retourne un tableau de tableaux
 
-            //* set les valeurs du tableau pour qu'il y ai des valeurs
-            $character->setLp($data["lp"]);
-            $character->setMp($data["mp"]);
-            $character->setAtk($data["atk"]);
-            $character->setDef($data["def"]);
-            $character->setAtkm($data["atkm"]);
-            $character->setDefm($data["defm"]);
-            $character->setSpeed($data["speed"]);
-
-        }
-
-        $lp=($_POST["lp"])==="" ? $character->getLp() : (int)sanitize($_POST["lp"]);
-        $mp=($_POST["mp"])==="" ? $character->getMp() : (int)sanitize($_POST["mp"]);
-        $atk=($_POST["atk"])==="" ? $character->getAtk() : (int)sanitize($_POST["atk"]);
-        $def=($_POST["def"])==="" ? $character->getDef() : (int)sanitize($_POST["def"]);
-        $atkm=($_POST["atkm"])==="" ? $character->getAtkm() : (int)sanitize($_POST["atkm"]);
-        $defm=($_POST["defm"])==="" ? $character->getDefm() : (int)sanitize($_POST["defm"]);
-        $speed=($_POST["speed"])==="" ? $character->getSpeed() : (int)sanitize($_POST["speed"]);
+        $lp=($_POST["lp"])==="" ? 
+        $character->getLp() : (int)sanitize($_POST["lp"]);
+        $mp=($_POST["mp"])==="" ? 
+        $character->getMp() : (int)sanitize($_POST["mp"]);
+        $atk=($_POST["atk"])==="" ? 
+        $character->getAtk() : (int)sanitize($_POST["atk"]);
+        $def=($_POST["def"])==="" ? 
+        $character->getDef() : (int)sanitize($_POST["def"]);
+        $atkm=($_POST["atkm"])==="" ? 
+        $character->getAtkm() : (int)sanitize($_POST["atkm"]);
+        $defm=($_POST["defm"])==="" ? 
+        $character->getDefm() : (int)sanitize($_POST["defm"]);
+        $speed=($_POST["speed"])==="" ? 
+        $character->getSpeed() : (int)sanitize($_POST["speed"]);
 
         $this->getModelCharacterSheet()
         ->setLp($lp)
@@ -139,7 +144,6 @@ class ControllerCharacterSheet{
         ->setAtkm($atkm)
         ->setDefm($defm)
         ->setSpeed($speed);
-        
 
         return $this->getModelCharacterSheet()->modify();
     }
@@ -155,14 +159,14 @@ class ControllerCharacterSheet{
         ->setId($_GET["id_character"])
         ->setName($_GET["name_character"]);
 
-        return $this->getModelCharacterSheet()->deleteCharacter();
+        return $this->getModelCharacterSheet()->delete();
 
         
     }
   
     public function render(){
 
-        $modify=$this->modify();
+        $modify=$this->modifyCharacter();
         $delete=$this->deleteCharacter();
         $character=$this->displayCharacter();
        

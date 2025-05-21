@@ -110,7 +110,7 @@ class ModelCharacterSheet{
         }
     }
     
-    public function deleteCharacter():string{
+    public function delete():string{
 
         try{
 

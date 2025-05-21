@@ -9,13 +9,11 @@
 class ControllerPlay{
     private ViewPlay $viewPlay;
     private ModelPlay $modelPlay;
-    private ModelCharacterSheet $modelCharacterSheet;
 
-    public function __construct(ViewPlay $viewPlay, ModelPlay $modelPlay, ModelCharacterSheet $modelCharacterSheet){
-
+    public function __construct(ViewPlay $viewPlay, ModelPlay $modelPlay){
+        
         $this->viewPlay=$viewPlay;
         $this->modelPlay=$modelPlay;
-        $this->modelCharacterSheet=$modelCharacterSheet;
     }
 
     public function getViewPlay(): ViewPlay { return $this->viewPlay; }
@@ -24,9 +22,6 @@ class ControllerPlay{
     public function getModelPlay(): ModelPlay { return $this->modelPlay; }
     public function setModelPlay(ModelPlay $modelPlay): self { $this->modelPlay = $modelPlay; return $this; }
 
-    public function getModelCharacterSheet(): ModelCharacterSheet { return $this->modelCharacterSheet; }
-    public function setModelCharacterSheet(ModelCharacterSheet $modelCharacterSheet): self { $this->modelCharacterSheet = $modelCharacterSheet; return $this; }
-
     public function displayCharacter(): string{
 
         $_SESSION["id_character"]=$_GET["id_character"];
@@ -34,7 +29,7 @@ class ControllerPlay{
 
         $character="";
 
-        $data=$this->modelCharacterSheet->getOneCharacter();
+        $data=$this->modelPlay->getOneCharacter();
         
         foreach($data as $row){
 

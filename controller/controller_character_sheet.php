@@ -159,9 +159,7 @@ class ControllerCharacterSheet{
         ->setId($_GET["id_character"])
         ->setName($_GET["name_character"]);
 
-        return $this->getModelCharacterSheet()->delete();
-
-        
+        return $this->getModelCharacterSheet()->delete();        
     }
   
     public function render(){

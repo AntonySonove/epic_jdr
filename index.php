@@ -134,23 +134,13 @@ switch($path){
         $header=new ControllerHeader(new ViewHeader);
         $header->render();
         
-        include "./model/model_character_sheet.php";
         include "./model/model_play.php";
         include "./controller/controller_play.php";
         include './view/view_play.php';
         
-        $play=new ControllerPlay(new ViewPlay, new ModelPlay(), new ModelCharacterSheet());
+        $play=new ControllerPlay(new ViewPlay, new ModelPlay());
         $play->render();
         include "./view/view_footer.php";
 
         break;
-
-    //* Route pour le fetch des données du personnage
-    // case "/repository/epic_jdr/controller/controller_play_data_character.php":
-        // session_start();
-        // include "./controller/controller_play_data_character.php";
-        // $dataCharacter=new ControllerPlayDataCharacter(new ModelPlay());
-        // $dataCharacter->fetchStat();
-
-        // break;
 }

@@ -29,6 +29,7 @@ class ControllerCharacterSheet{
         $character="";
 
         $data=$this->modelCharacterSheet->getOneCharacter();
+        
         $_SESSION["id_character"]=$_GET["id_character"];
         $_SESSION["name_character"]=$_GET["name_character"];
 

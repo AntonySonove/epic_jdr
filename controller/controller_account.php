@@ -1,11 +1,4 @@
 <?php
-// session_start();
-// include "../model/model_account.php";
-// include "../model/model_index.php";
-// include "../utils/utils.php";
-// include "../controller/controller_header.php";
-// include "../view/view_account.php";
-
 class ControllerAccount{
     private ?ViewAccount $viewAccount;
     private ?ModelAccount $modelAccount;
@@ -178,8 +171,3 @@ class ControllerAccount{
         ->displayView();
     }
 }
-// $account=new ControllerAccount(new ViewAccount, new ModelAccount(),new ModelIndex());
-
-// $account->render();
-     
-// include "../view/view_footer.php";

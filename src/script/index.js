@@ -2,8 +2,6 @@ const signUp = document.querySelector("#signUp");
 const passwordSignUp = document.querySelector("input[name='password']");
 const passwordError=document.querySelector("#passwordError");
 
-
-
 const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d])[A-Za-z\d\S]{8,}$/;
 
 signUp.addEventListener("submit",(e) => {

@@ -5,9 +5,14 @@
         <a href="#">Contact</a>
     </footer>
     
-    <script src="/repository/epic_jdr/src/script/header.js"></script>
-    <script src="/repository/epic_jdr/src/script/index.js"></script>
-    <script src="/repository/epic_jdr/src/script/account.js"></script>
-    <script src="/repository/epic_jdr/src/script/play.js"></script>
+    <?php
+    if($_SESSION){
+        $script='
+    <script src="/repository/epic_jdr/src/script/header.js"></script>';
+    }else{
+        $script='';
+    }
+    ?>
+    <?= $script ?>
 </body>
 </html>

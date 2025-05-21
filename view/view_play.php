@@ -11,6 +11,7 @@ class ViewPlay{
 <main class="mainPlay">
     '.$this->getCharacter().'
 </main>
+<script src="/repository/epic_jdr/src/script/play.js"></script>
         ';
     }
 }

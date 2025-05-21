@@ -22,6 +22,8 @@ class ControllerPlayDataCharacter{
         echo json_encode($data);
     }
 }
+
 $dataCharacter=new ControllerPlayDataCharacter(new ModelPlay());
 
 $dataCharacter->fetchStat();
+

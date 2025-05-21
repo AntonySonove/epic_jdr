@@ -83,7 +83,6 @@ function fetchCharacter(){
                 atkm:[upAtkm, atkm, currentAtkm, downAtkm, inputAtkm, resetAtkm, resetAtkm2],
                 defm:[upDefm, defm, currentDefm, downDefm, inputDefm, resetDefm, resetDefm2],
                 speed:[upSpeed, speed, currentSpeed, downSpeed, inputSpeed, resetSpeed, resetSpeed2]
-                
             };
 
             let maxLpGauge=lp;
@@ -94,6 +93,7 @@ function fetchCharacter(){
             Object.values(stats).forEach((key) => { 
                 //? Object.value permet de boucler sur un tableau d'objet (.value permet d'acceder uniquement au valeurs)
                 
+                //* Boutons +
                 key[0].addEventListener("click",()=>{
 
                     key[1]+=Number(key[4].value) || 1; 
@@ -106,10 +106,11 @@ function fetchCharacter(){
                     key[4].value=""; //? vide la saisie de l'input
 
                     if (key[1]<0){
-                        key[2].innerText=0;
+                        key[2].innerText=0; //? bloque le texte 0 lorsque les points d'une statistique devient inférieur a 0
                     }
                 });
 
+                //* Boutons -
                 key[3].addEventListener("click",()=>{
 
                     key[1]-=Number(key[4].value) || 1;
@@ -121,11 +122,14 @@ function fetchCharacter(){
                     }
                 });
                 
+                //* Reset (menu dropdown)
                 key[5].addEventListener("click",()=>{
 
                     key[1]=lp;
                     key[2].innerText=key[1];
                 })
+
+                //* Reset
                 key[6].addEventListener("click",()=>{
 
                     key[1]=lp;
@@ -136,6 +140,7 @@ function fetchCharacter(){
             //! ANNIMATION DES JAUGES DE PV ET PM
             
             //* JAUGE PV
+            // Augmentation
             upLp.addEventListener("click", () => {
 
                 let currentLp=stats["lp"][1];
@@ -147,6 +152,8 @@ function fetchCharacter(){
              
                 document.querySelector('#greenLp').style.width = pourcent + "%";
             });
+
+            // Diminution
             downLp.addEventListener("click", () => {
 
                 let currentLp=stats["lp"][1];
@@ -161,16 +168,23 @@ function fetchCharacter(){
 
                 document.querySelector('.lpGauge div').style.width = pourcent + "%";
             });
+
+            // Boutons reset (menu dropdown)
             resetLp.addEventListener("click",()=>{
                 let pourcent=100;
+
                 document.querySelector('.lpGauge div').style.width = pourcent + "%";
             })
+
+            // Boutons reset
             resetLp2.addEventListener("click",()=>{
                 let pourcent=100;
+                
                 document.querySelector('.lpGauge div').style.width = pourcent + "%";
             })
 
             //* JAUGE MP
+            // Augmentation
             upMp.addEventListener("click", () => {
 
                 let currentMp=stats["mp"][1];
@@ -182,6 +196,8 @@ function fetchCharacter(){
 
                 document.querySelector('.mpGauge div').style.width = pourcent + "%";
             });
+
+            // Diminution
             downMp.addEventListener("click", () => {
 
                 let currentMp=stats["mp"][1];
@@ -196,10 +212,14 @@ function fetchCharacter(){
 
                 document.querySelector('.mpGauge div').style.width = pourcent + "%";
             });
+
+            // Boutons reset (menu dropdown)
             resetMp.addEventListener("click",()=>{
                 let pourcent=100;
                 document.querySelector('.mpGauge div').style.width = pourcent + "%";
             })
+
+            // Boutons reset
             resetMp2.addEventListener("click",()=>{
                 let pourcent=100;
                 document.querySelector('.mpGauge div').style.width = pourcent + "%";
@@ -211,3 +231,4 @@ function fetchCharacter(){
     );
 }
 fetchCharacter();
+

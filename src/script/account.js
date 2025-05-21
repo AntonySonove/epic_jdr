@@ -2,6 +2,8 @@ const formPassword=document.querySelector("#formPassword");
 const changePassword=document.querySelector("#changePassword");
 const changePasswordError=document.querySelector("#changePasswordError");
 
+const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d])[A-Za-z\d\S]{8,}$/;
+
 formPassword.addEventListener("submit",(e) => {
 
     const password = changePassword.value;
@@ -17,4 +19,4 @@ formPassword.addEventListener("submit",(e) => {
 });
 
 const mdp="Kaibacorp1"
-console.log(regexPassword.test(mdp));
+// console.log(regexPassword.test(mdp));

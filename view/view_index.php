@@ -21,7 +21,7 @@ class ViewIndex{
        
        return '
        
-    <main class="mainIndex">
+<main class="mainIndex">
        
     '.$this->getMessageConnexion().'
     '.$this->getMessage().'
@@ -63,6 +63,7 @@ class ViewIndex{
     <div id="passwordError" style="color:red"></div>
 
 </main>
+<script src="/repository/epic_jdr/src/script/index.js"></script>
         ';
     }
 }

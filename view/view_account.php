@@ -84,7 +84,7 @@ class ViewAccount{
     </div>
 
 </main>
-
+<script src="/repository/epic_jdr/src/script/account.js"></script>
         ';
     } 
 }

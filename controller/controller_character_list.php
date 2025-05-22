@@ -46,7 +46,6 @@ class ControllerCharacterList{
             </article>
             ';
         }
-        
         return $characterList;
     }
   

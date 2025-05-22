@@ -17,10 +17,10 @@ class ControllerCreateCharacter{
 
     public function getModelCreateCharacter():ModelCreateCharacter{
         return $this->modelCreateCharacter;
-}
+    }
     public function getViewCreateCharacter():ViewCreateCharacter{
         return $this->viewCreateCharacter;
-}
+    }
     public function setModelCreateCharacter(?ModelCreateCharacter $modelCreateCharacter):self {
         $this->modelCreateCharacter = $modelCreateCharacter;
         return $this;

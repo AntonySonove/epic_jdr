@@ -50,13 +50,10 @@ class ModelCharacterSheet{
     public function setBdd(?PDO $bdd): self { $this->bdd = $bdd; return $this; }
 
     public function getOneCharacter():array | string{
-
         try {
             
         $req=$this->getBdd()->prepare("SELECT id_character, name_character, lp, mp, atk, def, atkm, defm, speed, c.id_user 
-        FROM characters as c
-        INNER JOIN users AS u
-        ON c.id_user = u.id_user
+        FROM characters AS c INNER JOIN users AS u ON c.id_user = u.id_user
         WHERE name_character=? AND c.id_user=? AND id_character=? AND email=? AND nickname=?");
 
         $req->bindParam(1,$_GET["name_character"],PDO::PARAM_STR);

@@ -122,20 +122,13 @@ class ControllerCharacterSheet{
         $character->setSpeed($data["speed"]);
 
 
-        $lp=($_POST["lp"])==="" ? 
-        $character->getLp() : (int)sanitize($_POST["lp"]);
-        $mp=($_POST["mp"])==="" ? 
-        $character->getMp() : (int)sanitize($_POST["mp"]);
-        $atk=($_POST["atk"])==="" ? 
-        $character->getAtk() : (int)sanitize($_POST["atk"]);
-        $def=($_POST["def"])==="" ? 
-        $character->getDef() : (int)sanitize($_POST["def"]);
-        $atkm=($_POST["atkm"])==="" ? 
-        $character->getAtkm() : (int)sanitize($_POST["atkm"]);
-        $defm=($_POST["defm"])==="" ? 
-        $character->getDefm() : (int)sanitize($_POST["defm"]);
-        $speed=($_POST["speed"])==="" ? 
-        $character->getSpeed() : (int)sanitize($_POST["speed"]);
+        $lp=($_POST["lp"])==="" ? $character->getLp() : (int)sanitize($_POST["lp"]);
+        $mp=($_POST["mp"])==="" ? $character->getMp() : (int)sanitize($_POST["mp"]);
+        $atk=($_POST["atk"])==="" ? $character->getAtk() : (int)sanitize($_POST["atk"]);
+        $def=($_POST["def"])==="" ? $character->getDef() : (int)sanitize($_POST["def"]);
+        $atkm=($_POST["atkm"])==="" ? $character->getAtkm() : (int)sanitize($_POST["atkm"]);
+        $defm=($_POST["defm"])==="" ? $character->getDefm() : (int)sanitize($_POST["defm"]);
+        $speed=($_POST["speed"])==="" ? $character->getSpeed() : (int)sanitize($_POST["speed"]);
 
         $this->getModelCharacterSheet()
         ->setLp($lp)

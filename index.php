@@ -1,4 +1,12 @@
 <?php
+$host = 'nom_du_serveur';
+$dbname = 'nom_de_la_base';
+$user = 'nom_utilisateur';
+$pass = 'mot_de_passe';
+
+$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+
+
 // #Activation du rewrite des URL
 // RewriteEngine On
 

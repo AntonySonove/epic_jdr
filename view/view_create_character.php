@@ -13,8 +13,7 @@ class ViewCreateCharacter{
 
     public function displayView(){
         
-        return '
-        
+        return '     
 <main class="mainCreateCharacter">
     <h2>Créer un nouveau personnage</h2>
 

@@ -16,9 +16,10 @@ CREATE TABLE IF NOT EXISTS characters(
     atkm INT NOT NULL,
     defm INT NOT NULL,
     speed INT NOT NULL,
-    id_user INT
+    id_user INT NOT NULL
 )engine=InnoDB;
 
 ALTER TABLE characters
 	ADD CONSTRAINT fk_users
-    FOREIGN KEY (id_user) REFERENCES users (id_user);
+    FOREIGN KEY (id_user) REFERENCES users (id_user)
+    ON DELETE CASCADE;

@@ -44,82 +44,103 @@ class ModelAccount{
     }
 
     public function changeNickname():string{
+        try{
 
-        $nickname=$this->getNickname();
+            $nickname=$this->getNickname();
 
-        $req=$this->getBdd()->prepare("UPDATE users
-        SET nickname=?
-        WHERE id_user=? AND email=? AND nickname=?");
+            $req=$this->getBdd()->prepare("UPDATE users
+            SET nickname=?
+            WHERE id_user=? AND email=? AND nickname=?");
 
-        $req->bindParam(1,$nickname, PDO::PARAM_STR);
-        $req->bindParam(2, $_SESSION["id_user"], PDO::PARAM_INT);
-        $req->bindParam(3, $_SESSION["email"], PDO::PARAM_STR);
-        $req->bindParam(4, $_SESSION["nickname"], PDO::PARAM_STR);
+            $req->bindParam(1,$nickname, PDO::PARAM_STR);
+            $req->bindParam(2, $_SESSION["id_user"], PDO::PARAM_INT);
+            $req->bindParam(3, $_SESSION["email"], PDO::PARAM_STR);
+            $req->bindParam(4, $_SESSION["nickname"], PDO::PARAM_STR);
 
-        $req->execute();
+            $req->execute();
 
-        $_SESSION["nickname"]=$nickname;
+            $_SESSION["nickname"]=$nickname;
 
-        return "<p><span style='color:green'>*Modification(s) enregistrée(s)</span></p>";
+            return "<p><span style='color:green'>*Modification(s) enregistrée(s)</span></p>";
+
+        }catch(PDOException $error){
+            return $error->getMessage();
+        }
     }
     
     public function changeEmail():string{
 
-        $email=$this->getEmail();
+        try{
 
-        $req=$this->getBdd()->prepare("UPDATE users
-        SET email=?
-        WHERE id_user=? AND email=? AND nickname=?");
+            $email=$this->getEmail();
 
-        $req->bindParam(1, $email, PDO::PARAM_STR);
-        $req->bindParam(2, $_SESSION["id_user"], PDO::PARAM_INT);
-        $req->bindParam(3, $_SESSION["email"], PDO::PARAM_STR);
-        $req->bindParam(4, $_SESSION["nickname"], PDO::PARAM_STR);
+            $req=$this->getBdd()->prepare("UPDATE users
+            SET email=?
+            WHERE id_user=? AND email=? AND nickname=?");
 
-        $req->execute();
+            $req->bindParam(1, $email, PDO::PARAM_STR);
+            $req->bindParam(2, $_SESSION["id_user"], PDO::PARAM_INT);
+            $req->bindParam(3, $_SESSION["email"], PDO::PARAM_STR);
+            $req->bindParam(4, $_SESSION["nickname"], PDO::PARAM_STR);
 
-        $_SESSION["email"]=$email;
+            $req->execute();
 
-        return "<p><span style='color:green'>*Modification(s) enregistrée(s)</span></p>";
+            $_SESSION["email"]=$email;
+
+            return "<p><span style='color:green'>*Modification(s) enregistrée(s)</span></p>";
+
+        }catch(PDOException $error){
+            return $error->getMessage();
+        }
     }
 
     public function changePassword():string{
+        try{
 
-        $password=$this->getPassword();
+            $password=$this->getPassword();
 
-        $req=$this->getBdd()->prepare("UPDATE users
-        SET password_user=?
-        WHERE id_user=? AND email=? AND nickname=?");
+            $req=$this->getBdd()->prepare("UPDATE users
+            SET password_user=?
+            WHERE id_user=? AND email=? AND nickname=?");
 
-        $req->bindParam(1, $password, PDO::PARAM_STR);
-        $req->bindParam(2, $_SESSION["id_user"], PDO::PARAM_INT);
-        $req->bindParam(3, $_SESSION["email"], PDO::PARAM_STR);
-        $req->bindParam(4, $_SESSION["nickname"], PDO::PARAM_STR);
+            $req->bindParam(1, $password, PDO::PARAM_STR);
+            $req->bindParam(2, $_SESSION["id_user"], PDO::PARAM_INT);
+            $req->bindParam(3, $_SESSION["email"], PDO::PARAM_STR);
+            $req->bindParam(4, $_SESSION["nickname"], PDO::PARAM_STR);
 
-        $req->execute();
+            $req->execute();
 
-        return "<p><span style='color:green'>*Modification(s) enregistrée(s)</span></p>";
+            return "<p><span style='color:green'>*Modification(s) enregistrée(s)</span></p>";
+
+        }catch(PDOException $error){
+            return $error->getMessage();
+        }
     }
 
     public function deleteAccount():string{
+        try{
 
-        $req=$this->getBdd()->prepare("DELETE FROM characters
-        WHERE id_user=?");
+            $req=$this->getBdd()->prepare("DELETE FROM characters
+            WHERE id_user=?");
 
-        $req->bindParam(1, $_SESSION["id_user"], PDO::PARAM_INT);
+            $req->bindParam(1, $_SESSION["id_user"], PDO::PARAM_INT);
 
-        $req->execute();
+            $req->execute();
 
-        $req=$this->getBdd()->prepare("DELETE FROM users
-        WHERE id_user=? AND email=? AND nickname=?");
+            $req=$this->getBdd()->prepare("DELETE FROM users
+            WHERE id_user=? AND email=? AND nickname=?");
 
-        $req->bindParam(1, $_SESSION["id_user"], PDO::PARAM_INT);
-        $req->bindParam(2, $_SESSION["email"], PDO::PARAM_STR);
-        $req->bindParam(3, $_SESSION["nickname"], PDO::PARAM_STR);
+            $req->bindParam(1, $_SESSION["id_user"], PDO::PARAM_INT);
+            $req->bindParam(2, $_SESSION["email"], PDO::PARAM_STR);
+            $req->bindParam(3, $_SESSION["nickname"], PDO::PARAM_STR);
 
-        $req->execute();
-        header("location:../controller/controller_disconnect.php");
+            $req->execute();
+            header("location:/repository/epic_jdr/controller/controller_disconnect.php");
 
-        return "<p><span style='color:green'>*Compte supprimé</span></p>";
+            return "<p><span style='color:green'>*Compte supprimé</span></p>";
+
+        }catch(PDOException $error){
+            return $error->getMessage();
+        }
     }
 }

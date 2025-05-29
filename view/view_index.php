@@ -35,8 +35,10 @@ class ViewIndex{
         <form id="signIn" class="welcome connexion" method="post">
             <h2>Connexion</h2>
             
+            <label for="emailConnexion">Email</label>
             <input class="inputFocus" type="email" name="emailConnexion" placeholder="E-mail">
         
+            <label for="passwordConnexion">Mot de passe</label>
             <input class="inputFocus" type="password" name="passwordConnexion" placeholder="Mot de passe">
 
             
@@ -44,18 +46,21 @@ class ViewIndex{
         </form>
 
 
-        <form id="signUp" class="welcome connexion" method="post">
+        <form id="signUp" class="welcome signIn" method="post">
             <h2>Inscription</h2>
-        
-            <input class="inputFocus" type="text" name="nickname" placeholder="Pseudo">
 
-            <input class="inputFocus" type="email" name="email" placeholder="E-mail">
+            <div><label for="nickname">Pseudo</label>
+            <input class="inputFocus" type="text" name="nickname" placeholder="Pseudo"></div>
 
-            <input class="inputFocus" type="password" name="password" placeholder="Mot de passe">
+            <div><label for="email">Email</label>
+            <input class="inputFocus" type="email" name="email" placeholder="E-mail"></div>
 
-            <input class="inputFocus" type="password" name="password2" placeholder="Confirmer le mot de passe">
+            <div><label for="password">Mot de passe</label>
+            <input class="inputFocus" type="password" name="password" placeholder="Mot de passe"></div>
 
-            
+            <div><label for="password2">Confirmer le mot de passe</label>
+            <input class="inputFocus" type="password" name="password2" placeholder="Confirmer le mot de passe"></div>
+
             <input class="submitIndex" type="submit" name="submit" value="Commencer l\'aventure!"></input>
 
         </form>

@@ -43,13 +43,13 @@ class ControllerCharacterSheet{
 
                 <div class="stat">
                     <div class="statName">
-                        <div>Points de vie : </div>
-                        <div>Points de magie : </div>
-                        <div>Attaque : </div>
-                        <div>Défense : </div>
-                        <div>Attaque magique : </div>
-                        <div>Défense magique : </div>
-                        <div>Vitesse : </div>  
+                        <label for="modifyLp">Points de vie : </label>
+                        <label for="modifyMp">Points de magie : </label>
+                        <label for="modifyAtk">Attaque : </label>
+                        <label for="modifyDef">Défense : </label>
+                        <label for="modifyAtkm">Attaque magique : </label>
+                        <label for="modifyDefm">Défense magique : </label>
+                        <label for="modifySpeed">Vitesse : </label>  
                     </div>
 
                     <div class="currentStat">
@@ -63,13 +63,13 @@ class ControllerCharacterSheet{
                     </div>
 
                     <div class=newStat>
-                        <input class="inputFocus" type="number" name="lp" >
-                        <input class="inputFocus" type="number" name="mp" >
-                        <input class="inputFocus" type="number" name="atk" >
-                        <input class="inputFocus" type="number" name="def" >
-                        <input class="inputFocus" type="number" name="atkm" >
-                        <input class="inputFocus" type="number" name="defm" >
-                        <input class="inputFocus" type="number" name="speed" >  
+                        <input class="inputFocus" type="number" name="lp" id="modifyLp">
+                        <input class="inputFocus" type="number" name="mp" id="modifyMp">
+                        <input class="inputFocus" type="number" name="atk" id="modifyAtk">
+                        <input class="inputFocus" type="number" name="def" id="modifyDef">
+                        <input class="inputFocus" type="number" name="atkm" id="modifyAtkm">
+                        <input class="inputFocus" type="number" name="defm" id="modifyDefm">
+                        <input class="inputFocus" type="number" name="speed" id="modifySpeed">  
                     </div>
                 </div>
 

@@ -16,7 +16,7 @@ class ControllerHeader{
         
 <header>
     <div class="logo">
-        <a href="/repository/epic_jdr/"><img class="logo" src="/repository/epic_jdr/src/ressources/logo_epic_jdr(1).png" width="150" height="150" alt="logo EPIC JDR"></a>
+        <a href="/repository/epic_jdr/"><img class="logo" src="/repository/epic_jdr/src/ressources/logo_epic_jdr(150x150).png" width="150" height="150" alt="logo EPIC JDR"></a>
     </div>
     <?= $header ?>
 </header>
@@ -29,7 +29,7 @@ class ControllerHeader{
         
 <header>
     <div class="logo">
-        <a href="/repository/epic_jdr/account"><img class="logo" src="/repository/epic_jdr/src/ressources/logo_epic_jdr(1).png" width="150" height="150" alt="logo"></a>
+        <a href="/repository/epic_jdr/account"><img class="logo" src="/repository/epic_jdr/src/ressources/logo_epic_jdr(150x150).png" width="150" height="150" alt="logo"></a>
     </div>
     
     <div id="burgerMenuButton">
@@ -86,5 +86,4 @@ class ControllerHeader{
 // $header= new ControllerHeader(new ViewHeader);
 
 // $header->render();
-
 

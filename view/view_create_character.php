@@ -22,25 +22,25 @@ class ViewCreateCharacter{
     <form class="welcome" action="" method="post">
         <div class="formCreateCharacter">
             <div class="statName">
-                <p>Nom</p>
-                <p>Points de vie</p>
-                <p >Points de magie</p>
-                <p>Attaque</p>
-                <p >Défense</p>
-                <p >Attaque magique</p>
-                <p >Défense magique</p>
-                <p >Vitesse</p>
+                <label for="inputName">Nom</label>
+                <label for="createLp">Points de vie</label>
+                <label for="createMp" >Points de magie</label>
+                <label for="createAtk">Attaque</label>
+                <label for="createDef" >Défense</label>
+                <label for="createAtkm" >Attaque magique</label>
+                <label for="createDefM" >Défense magique</label>
+                <label for="createSpeed" >Vitesse</label>
             </div>
             
             <div class="statInput">
                 <input class="inputFocus" id="inputName" type="text" name="name" placeholder="Nom">
-                <input class="inputFocus" type="number" name="lp" placeholder="0">
-                <input class="inputFocus" type="number" name="mp" placeholder="0">
-                <input class="inputFocus" type="number" name="atk" placeholder="0">
-                <input class="inputFocus" type="number" name="def" placeholder="0">
-                <input class="inputFocus" type="number" name="atkm" placeholder="0">
-                <input class="inputFocus" type="number" name="defm" placeholder="0">
-                <input class="inputFocus" type="number" name="speed" placeholder="0">
+                <input class="inputFocus" type="number" name="lp" id="createLp" placeholder="0">
+                <input class="inputFocus" type="number" name="mp" id="createMp" placeholder="0">
+                <input class="inputFocus" type="number" name="atk" id="createAtk" placeholder="0">
+                <input class="inputFocus" type="number" name="def" id="createDef" placeholder="0">
+                <input class="inputFocus" type="number" name="atkm" id="createAtkm" placeholder="0">
+                <input class="inputFocus" type="number" name="defm" id="createDefm" placeholder="0">
+                <input class="inputFocus" type="number" name="speed" id="createSpeed" placeholder="0">
             </div>
         </div>
 

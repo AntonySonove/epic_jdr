@@ -135,7 +135,6 @@ function fetchCharacter(){
                 //* Reset (menu dropdown)
                 key[5].addEventListener("click",()=>{
 
-                    // key[1]=lp;
                     key[1]=key[7];
                     key[2].innerText=key[1];
                 })
@@ -143,7 +142,6 @@ function fetchCharacter(){
                 //* Reset
                 key[6].addEventListener("click",()=>{
 
-                    // key[1]=lp;
                     key[1]=key[7];
                     key[2].innerText=key[1];
                 })

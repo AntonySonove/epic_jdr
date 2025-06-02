@@ -75,14 +75,23 @@ function fetchCharacter(){
             const resetDefm2=document.getElementById("resetDefm2");
             const resetSpeed2=document.getElementById("resetSpeed2");
             
+            // let stats={
+            //     lp:[upLp, lp, currentLp, downLp, inputLp, resetLp, resetLp2],
+            //     mp:[upMp, mp, currentMp, downMp, inputMp, resetMp, resetMp2],
+            //     atk:[upAtk, atk, currentAtk, downAtk, inputAtk, resetAtk, resetAtk2],
+            //     def:[upDef, def, currentDef, downDef, inputDef, resetDef, resetDef2],
+            //     atkm:[upAtkm, atkm, currentAtkm, downAtkm, inputAtkm, resetAtkm, resetAtkm2],
+            //     defm:[upDefm, defm, currentDefm, downDefm, inputDefm, resetDefm, resetDefm2],
+            //     speed:[upSpeed, speed, currentSpeed, downSpeed, inputSpeed, resetSpeed, resetSpeed2]
+            // };
             let stats={
-                lp:[upLp, lp, currentLp, downLp, inputLp, resetLp, resetLp2],
-                mp:[upMp, mp, currentMp, downMp, inputMp, resetMp, resetMp2],
-                atk:[upAtk, atk, currentAtk, downAtk, inputAtk, resetAtk, resetAtk2],
-                def:[upDef, def, currentDef, downDef, inputDef, resetDef, resetDef2],
-                atkm:[upAtkm, atkm, currentAtkm, downAtkm, inputAtkm, resetAtkm, resetAtkm2],
-                defm:[upDefm, defm, currentDefm, downDefm, inputDefm, resetDefm, resetDefm2],
-                speed:[upSpeed, speed, currentSpeed, downSpeed, inputSpeed, resetSpeed, resetSpeed2]
+                lp:[upLp, lp, currentLp, downLp, inputLp, resetLp, resetLp2, lp],
+                mp:[upMp, mp, currentMp, downMp, inputMp, resetMp, resetMp2, mp],
+                atk:[upAtk, atk, currentAtk, downAtk, inputAtk, resetAtk, resetAtk2, atk],
+                def:[upDef, def, currentDef, downDef, inputDef, resetDef, resetDef2, def],
+                atkm:[upAtkm, atkm, currentAtkm, downAtkm, inputAtkm, resetAtkm, resetAtkm2, atkm],
+                defm:[upDefm, defm, currentDefm, downDefm, inputDefm, resetDefm, resetDefm2, defm],
+                speed:[upSpeed, speed, currentSpeed, downSpeed, inputSpeed, resetSpeed, resetSpeed2, speed]
             };
 
             let maxLpGauge=lp;
@@ -108,6 +117,7 @@ function fetchCharacter(){
                     if (key[1]<0){
                         key[2].innerText=0; //? bloque le texte 0 lorsque les points d'une statistique devient inférieur a 0
                     }
+                    console.log(stats);
                 });
 
                 //* Boutons -
@@ -125,14 +135,16 @@ function fetchCharacter(){
                 //* Reset (menu dropdown)
                 key[5].addEventListener("click",()=>{
 
-                    key[1]=lp;
+                    // key[1]=lp;
+                    key[1]=key[7];
                     key[2].innerText=key[1];
                 })
 
                 //* Reset
                 key[6].addEventListener("click",()=>{
 
-                    key[1]=lp;
+                    // key[1]=lp;
+                    key[1]=key[7];
                     key[2].innerText=key[1];
                 })
             });
